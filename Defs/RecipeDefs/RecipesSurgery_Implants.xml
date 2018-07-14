@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  
+	<RecipeDef ParentName="SurgeryFlesh">
+		<defName>Obi_GenAug_InstallMuffalo_Spine</defName>
+		<label>augment spine - Muffalo I</label>
+		<description>Augments subjects spine with Mufflo enhancements.</description>
+		<workerClass>Recipe_InstallImplant</workerClass>
+		<jobString>Augmenting subjects spine.</jobString>
+		<workAmount>3500</workAmount>
+		<skillRequirements>
+			<Medicine>10</Medicine>
+		</skillRequirements>		
+		<recipeUsers>
+			<li>Human</li>
+        </recipeUsers>
+		<ingredients>
+			<li>
+				<filter>
+					<categories>
+						<li>Medicine</li>
+					</categories>
+				</filter>
+				<count>4</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>GR_MuffaloMuscles</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<categories>
+				<li>Medicine</li>
+			</categories>
+			<thingDefs>
+				<li>GR_MuffaloMuscles</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>Spine</li> 
+		</appliedOnFixedBodyParts>
+		<addsHediff>Obi_GenAug_SpineMuffaloI</addsHediff>
+	</RecipeDef>
+	
+  
+</Defs>

@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+ 
+  <ThingDef ParentName="BodyPartArtificialBase">
+    <defName>GR_MuffaloMuscles</defName>
+    <label>muffalo strengthened muscles</label>
+    <description>By weaving muffalo muscle strands with the subjects muscular system, strength, resilience and carrying capacity are greatly increased.</description>
+    <tradeability>Sellable</tradeability>
+    <graphicData>
+      <texPath>Things/Item/HumanGeneticHybridOrgan</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <MarketValue>1500</MarketValue>
+      <Mass>4</Mass>
+    </statBases>
+  </ThingDef>
+
+</Defs>
