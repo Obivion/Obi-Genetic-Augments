@@ -1,7 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-  
 	<RecipeDef ParentName="SurgeryFlesh">
 		<defName>Obi_GenAug_InstallMuffalo_Spine</defName>
 		<label>augment spine - Muffalo I</label>
@@ -27,10 +26,10 @@
 			<li>
 				<filter>
 					<thingDefs>
-						<li>GR_MuffaloMuscles</li>
+						<li>Obi_GenAug_MuffaloGeneticsI</li>
 					</thingDefs>
 				</filter>
-				<count>1</count>
+				<count>6</count>
 			</li>
 		</ingredients>
 		<fixedIngredientFilter>
@@ -38,7 +37,7 @@
 				<li>Medicine</li>
 			</categories>
 			<thingDefs>
-				<li>GR_MuffaloMuscles</li>
+				<li>Obi_GenAug_MuffaloGeneticsI</li>
 			</thingDefs>
 		</fixedIngredientFilter>
 		<appliedOnFixedBodyParts>
@@ -47,5 +46,94 @@
 		<addsHediff>Obi_GenAug_SpineMuffaloI</addsHediff>
 	</RecipeDef>
 	
-  
+	<RecipeDef ParentName="SurgeryFlesh">
+		<defName>Obi_GenAug_InstallMuffalo_Legs</defName>
+		<label>augment leg - Muffalo I</label>
+		<description>Augments subjects legs with Mufflo enhancements.</description>
+		<workerClass>Recipe_InstallImplant</workerClass>
+		<jobString>Augmenting subjects leg.</jobString>
+		<workAmount>3000</workAmount>
+		<skillRequirements>
+			<Medicine>8</Medicine>
+		</skillRequirements>		
+		<recipeUsers>
+			<li>Human</li>
+        </recipeUsers>
+		<ingredients>
+			<li>
+				<filter>
+					<categories>
+						<li>Medicine</li>
+					</categories>
+				</filter>
+				<count>1</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Obi_GenAug_MuffaloGeneticsI</li>
+					</thingDefs>
+				</filter>
+				<count>2</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<categories>
+				<li>Medicine</li>
+			</categories>
+			<thingDefs>
+				<li>Obi_GenAug_MuffaloGeneticsI</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>Leg</li>
+		</appliedOnFixedBodyParts>
+		<addsHediff>Obi_GenAug_LegMuffaloI</addsHediff>
+	</RecipeDef>
+
+	<RecipeDef ParentName="SurgeryFlesh">
+		<defName>Obi_GenAug_InstallMuffalo_Arm</defName>
+		<label>augment arm - Muffalo I</label>
+		<description>Augments subjects arm with Mufflo enhancements.</description>
+		<workerClass>Recipe_InstallImplant</workerClass>
+		<jobString>Augmenting subjects arm.</jobString>
+		<workAmount>3000</workAmount>
+		<skillRequirements>
+			<Medicine>8</Medicine>
+		</skillRequirements>		
+		<recipeUsers>
+			<li>Human</li>
+        </recipeUsers>
+		<ingredients>
+			<li>
+				<filter>
+					<categories>
+						<li>Medicine</li>
+					</categories>
+				</filter>
+				<count>1</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Obi_GenAug_MuffaloGeneticsI</li>
+					</thingDefs>
+				</filter>
+				<count>2</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<categories>
+				<li>Medicine</li>
+			</categories>
+			<thingDefs>
+				<li>Obi_GenAug_MuffaloGeneticsI</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>Arm</li> 
+		</appliedOnFixedBodyParts>
+		<addsHediff>Obi_GenAug_ArmMuffaloI</addsHediff>
+	</RecipeDef>
+	
 </Defs>

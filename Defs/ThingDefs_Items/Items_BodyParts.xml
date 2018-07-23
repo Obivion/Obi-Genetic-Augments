@@ -1,19 +1,40 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
  
-  <ThingDef ParentName="BodyPartArtificialBase">
-    <defName>GR_MuffaloMuscles</defName>
-    <label>muffalo strengthened muscles</label>
-    <description>By weaving muffalo muscle strands with the subjects muscular system, strength, resilience and carrying capacity are greatly increased.</description>
+   <ThingDef Name="Obi_GenAug_GeneticBase" ParentName="ResourceBase" Abstract="True">
+    <soundInteract>Standard_Drop</soundInteract>
+    <soundDrop>Standard_Drop</soundDrop>
+	<stackLimit>25</stackLimit>
+    <statBases>
+      <MaxHitPoints>5</MaxHitPoints>
+      <MarketValue>10</MarketValue>
+      <Mass>0.5</Mass>
+      <Flammability>1.0</Flammability>   
+      <DeteriorationRate>3</DeteriorationRate>
+    </statBases>
+	<tradeability>None</tradeability>
+    <tickerType>Rare</tickerType>
+    <comps>
+      <li Class="CompProperties_Rottable">
+        <daysToRotStart>2</daysToRotStart>
+				<rotDestroys>true</rotDestroys>
+			</li>
+    </comps>
+  </ThingDef>
+ 
+  <ThingDef ParentName="Obi_GenAug_GeneticBase">
+    <defName>Obi_GenAug_MuffaloGeneticsI</defName>
+    <label>muffalo genetic material</label>
+    <description>Muffalo genetic material, when combind with humanoid genetic material and a stabaliser can augment a subject with aditional strength and cold resistance.
+	Possible Augments: (assuming subject has fully adapted over time)
+	-Spine - Manipulation +25% - Comfy Temp -10
+	-Legs  - Manipulation +1%  - Comfy Temp -5 - Movement +3%
+	-Arms  - Manipulation +1%  - Comfy Temp -5 - Melee Weapon damage +7%</description>
     <tradeability>Sellable</tradeability>
     <graphicData>
-      <texPath>Things/Item/HumanGeneticHybridOrgan</texPath>
+      <texPath>Things/Item/MuffaloGenetics</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
-    <statBases>
-      <MarketValue>1500</MarketValue>
-      <Mass>4</Mass>
-    </statBases>
   </ThingDef>
 
 </Defs>

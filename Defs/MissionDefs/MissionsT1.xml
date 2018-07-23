@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	
+	<MissionsAndObjectives.MissionControlDef>
+		<defName>Obi_GenAug_Missions</defName>
+		<label>The Dawn of Genetics</label>
+		<color>(50,50,50)</color>
+		<borderColor>(200,200,200)</borderColor>
+		<targetTex>UI/ObjectiveMarker</targetTex>
+		<bannerTex>UI/MissionBanner</bannerTex>
+		<boxActive>UI/Icons/Active</boxActive>
+		<boxFinished>UI/Icons/Finished</boxFinished>
+		<boxFailed>UI/Icons/Failed</boxFailed>
+	</MissionsAndObjectives.MissionControlDef>
+
+	<MissionsAndObjectives.MissionDef>
+		<defName>Obi_GenAug_M1P</defName>
+		<label>First Contact - Clyde</label>
+		<basePrerequeisite>MedicineProduction</basePrerequeisite>
+		<description>Greetings and Salutations!
+		
+I go by the name of Clyde, my colony escape ship is in orbit of the hellhole you are currently living on. We blasted off over 20 years ago now, and from here we have had the pleasure of watching everyone try and survive long enough to escape like us. Unfortunately the ship we spent over 30 years creating, while it can house us all and it’s full of luxury, is unable to leave orbit. I will save you the technical crap about the what’s and whys, it’s not all that important.
+
+What is important is what we can do for you and at the same time what you can do for us.
+
+Setup an uplink with your colony comms console and our ship, then we can talk about this some more, I highly recommend you take up the offer as it may save your lives, or make your chances less slim.</description>
+		<hideOnComplete>false</hideOnComplete>
+		<repeatable>false</repeatable>
+		<objectives>
+			<li>Obi_GenAug_M1_O1</li>
+			<li>Obi_GenAug_M1_O2</li>
+			<li>Obi_GenAug_M1_O3</li>
+		</objectives>
+	</MissionsAndObjectives.MissionDef>
+	
+	<MissionsAndObjectives.ObjectiveDef>
+		<defName>Obi_GenAug_M1_O1</defName>
+		<description>Prepare Comms console for uplink</description>
+		<skillRequirements>
+			<Intellectual>8</Intellectual>
+		</skillRequirements>
+		<label>Create uplink.</label>
+		<objectiveType>Examine</objectiveType>
+		<workAmount>20</workAmount>
+		<targets>
+			<li>CommsConsole</li>
+		</targets>
+		<images>
+			<li>ObjImages/ImageOfABow</li>
+		</images>
+	</MissionsAndObjectives.ObjectiveDef>
+	
+	<MissionsAndObjectives.ObjectiveDef>
+		<defName>Obi_GenAug_M1_O2</defName>
+		<description>Receive initial data burst from orbit</description>
+		<skillRequirements>
+			<Intellectual>10</Intellectual>
+		</skillRequirements>
+		<label>Receiving data burst.</label>
+		<objectiveType>Examine</objectiveType>
+		<objectiveRequisites>
+			<li>Obi_GenAug_M1_O1</li>
+		</objectiveRequisites>		
+		<workAmount>30</workAmount>
+		<targets>
+			<li>CommsConsole</li>
+		</targets>
+		<images>
+			<li>ObjImages/ImageOfABow</li>
+		</images>
+	</MissionsAndObjectives.ObjectiveDef>	
+
+	<MissionsAndObjectives.ObjectiveDef>
+		<defName>Obi_GenAug_M1_O3</defName>
+		<description>Review data at research bench</description>
+		<skillRequirements>
+			<Intellectual>12</Intellectual>
+		</skillRequirements>
+		<label>Reviewing data.</label>
+		<objectiveType>Research</objectiveType>
+		<stationDefs>
+			<li>HiTechResearchBench</li>
+		</stationDefs>
+		<objectiveRequisites>
+			<li>Obi_GenAug_M1_O2</li>
+		</objectiveRequisites>		
+		<workAmount>50</workAmount>
+		<images>
+			<li>ObjImages/ImageOfABow</li>
+		</images>
+	</MissionsAndObjectives.ObjectiveDef>	
+<!--	<MissionsAndObjectives.ObjectiveDef>
+		<defName>Obi_GenAug_M1_O2</defName>
+		<description>Now that the uplink has been setup, construct a databank for the Comms console</description>
+		<label>Find a few hares.</label>
+		<objectiveType>Discover</objectiveType>
+		<objectiveRequisites>
+			<li>Obi_GenAug_M1_O1</li>
+		</objectiveRequisites>
+		<anyTarget>true</anyTarget>
+		<!{1}** anyTarget=true implies 6 Hare OR 6 Snowhare would work **{1}>
+		<!{1}** but it seems this is behaving as AND currently. **{1}>
+		<targets>
+			<li>Hare,6</li>
+			<li>Snowhare,6</li>
+		</targets>
+		<images>
+			<li>ObjImages/ImageOfAHareInTheFields</li>
+		</images>
+	</MissionsAndObjectives.ObjectiveDef>
+
+	<MissionsAndObjectives.ObjectiveDef>
+		<defName>Obi_GenAug_M1_O3</defName>
+		<description>Ah! There they are! Go ahead! KILL THEM!!!.</description>
+		<label>Murder 6 hares.</label>
+		<objectiveType>Hunt</objectiveType>
+		<objectiveRequisites>
+			<li>FindAHare</li>
+		</objectiveRequisites>
+		<anyTarget>true</anyTarget>
+		<targets>
+			<li>Hare,6</li>
+			<li>Snowhare,6</li>
+		</targets>
+		<timerDays>1</timerDays>
+		<incidentsOnFail>
+			<li Class="MissionsAndObjectives.IncidentProperties">
+				<type>Raid</type>
+				<category>ThreatBig</category>
+				<tale>Raid</tale>
+				<raidFaction>Pirate</raidFaction>				
+				<spawnList>
+					<li>Hare,100</li>
+				</spawnList>
+			</li>
+			<!{1}** You would need to create this mission! 
+			<li Class="MissionsAndObjectives.IncidentProperties">
+				<type>UnlockMission</type>
+				<missionUnlocks>
+					<li>OHMYGODTHEREISTOOMANYOFTHEM</li>
+				</missionUnlocks>
+			</li>
+			**{1}>
+		</incidentsOnFail>
+		<images>
+			<li>ObjImages/ImageOfAScaredRabbit</li>
+		</images>
+	</MissionsAndObjectives.ObjectiveDef>
+
+	<MissionsAndObjectives.ObjectiveDef>
+		<defName>Obi_GenAug_M1_O4</defName>
+		<description>That was a fight, could've ended badly there.</description>
+		<label>Cook a meal.</label>
+		<objectiveType>Craft</objectiveType>
+		<objectiveRequisites>
+			<li>HuntAHare</li>
+		</objectiveRequisites>
+		<targets>
+			<li>MealSimple</li>
+		</targets>
+		<incidentsOnCompletion>
+			<li Class="MissionsAndObjectives.IncidentProperties">
+				<type>RewardDropPod</type>
+				<spawnList>
+					<li>Gold,50</li>
+				</spawnList>
+			</li>
+		</incidentsOnCompletion>
+		<images>
+			<li>ObjImages/CookedHare</li>
+		</images>
+	</MissionsAndObjectives.ObjectiveDef>-->
+
+</Defs>

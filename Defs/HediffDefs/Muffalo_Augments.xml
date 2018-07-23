@@ -53,6 +53,9 @@
 				<offset>-0.3</offset>
 			</li>
 		</capMods>
+            <statOffsets>
+				<ComfyTemperatureMin>-1</ComfyTemperatureMin>
+            </statOffsets>			
 		</li>	
 	  
 		<li>
@@ -67,6 +70,9 @@
 				<offset>-0.3</offset>
 			</li>
 		</capMods>
+            <statOffsets>
+				<ComfyTemperatureMin>-3</ComfyTemperatureMin>
+            </statOffsets>			
 		</li>
 	
 		<li>
@@ -79,7 +85,11 @@
 				<offset>0.1</offset>				   
 			</li>
 		</capMods>
+            <statOffsets>
+				<ComfyTemperatureMin>-5</ComfyTemperatureMin>
+            </statOffsets>			
 		</li>
+		
 		<li>
         <label>Fully adapted</label>
         <minSeverity>0.8</minSeverity>
@@ -89,12 +99,204 @@
 				<offset>0.25</offset>				   
 			</li>
 		</capMods>
+            <statOffsets>
+				<ComfyTemperatureMin>-10</ComfyTemperatureMin>
+            </statOffsets>		
 		</li> 
-    </stages>	  
-    <spawnThingOnRemoved>GR_MuffaloMuscles</spawnThingOnRemoved>
-    
+    </stages> 
 	
   </HediffDef>
 
-   
+    <HediffDef ParentName="Obi_GenAug_PartsBase">
+    <defName>Obi_GenAug_LegMuffaloI</defName>
+    <label>Augmented leg - Muffalo</label>
+	<tendable>true</tendable>
+
+    <comps>
+		<li Class="HediffCompProperties_TendDuration">
+			<baseTendDurationHours>120</baseTendDurationHours>
+			<severityPerDayTended>0.038</severityPerDayTended>
+		</li>	  
+		<li Class="HediffCompProperties_severityPerDay">
+			<severityPerDay>-0.03</severityPerDay>
+		</li>
+    </comps>
+	  
+	<stages>
+		<li>
+        <label>Augmentaion fail</label>
+		<partEfficiencyOffset>-0.8</partEfficiencyOffset>
+		<painOffset>0.15</painOffset>
+		<capMods>
+			<li>
+				<capacity>Consciousness</capacity>
+				<offset>-0.2</offset>
+			</li>           
+        </capMods>				
+		</li>
+	  
+		<li>
+		<label>Augment failing</label>
+		<minSeverity>0.1</minSeverity>
+		<partEfficiencyOffset>-0.6</partEfficiencyOffset>
+		<vomitMtbDays>1</vomitMtbDays>
+		<painOffset>0.10</painOffset>
+		<capMods>
+			<li>
+				<capacity>Consciousness</capacity>
+				<offset>-0.1</offset>
+			</li>
+		</capMods>
+            <statOffsets>
+				<ComfyTemperatureMin>-1</ComfyTemperatureMin>
+            </statOffsets>			
+		</li>	
+	  
+		<li>
+		<label>Augment rejection</label>
+		<minSeverity>0.3</minSeverity>
+		<partEfficiencyOffset>-0.4</partEfficiencyOffset>
+		<vomitMtbDays>1</vomitMtbDays>
+		<painOffset>0.05</painOffset>
+		<capMods>
+			<li>
+				<capacity>Consciousness</capacity>
+				<offset>-0.1</offset>
+			</li>
+		</capMods>
+            <statOffsets>
+				<ComfyTemperatureMin>-2</ComfyTemperatureMin>
+            </statOffsets>			
+		</li>
+	
+		<li>
+        <label>Augment adapting</label>
+        <minSeverity>0.6</minSeverity>
+		<painOffset>0.025</painOffset>
+		<capMods>
+			<li>
+				<capacity>Manipulation</capacity>
+				<offset>0.005</offset>				   
+			</li>
+		</capMods>
+            <statOffsets>
+				<ComfyTemperatureMin>-3</ComfyTemperatureMin>
+				<MoveSpeed>1.015</MoveSpeed>
+            </statOffsets>			
+		</li>
+		
+		<li>
+        <label>Fully adapted</label>
+        <minSeverity>0.8</minSeverity>
+		<capMods>
+			<li>
+				<capacity>Manipulation</capacity>
+				<offset>0.01</offset>				   
+			</li>
+		</capMods>
+            <statOffsets>
+				<ComfyTemperatureMin>-5</ComfyTemperatureMin>
+				<MoveSpeed>1.03</MoveSpeed>
+            </statOffsets>		
+		</li> 
+    </stages> 
+	
+  </HediffDef>
+  
+    <HediffDef ParentName="Obi_GenAug_PartsBase">
+    <defName>Obi_GenAug_ArmMuffaloI</defName>
+    <label>Augmented arm - Muffalo</label>
+	<tendable>true</tendable>
+
+    <comps>
+		<li Class="HediffCompProperties_TendDuration">
+			<baseTendDurationHours>120</baseTendDurationHours>
+			<severityPerDayTended>0.038</severityPerDayTended>
+		</li>	  
+		<li Class="HediffCompProperties_severityPerDay">
+			<severityPerDay>-0.03</severityPerDay>
+		</li>
+    </comps>
+	  
+	<stages>
+		<li>
+        <label>Augmentaion fail</label>
+		<partEfficiencyOffset>-0.8</partEfficiencyOffset>
+		<painOffset>0.15</painOffset>
+		<capMods>
+			<li>
+				<capacity>Consciousness</capacity>
+				<offset>-0.2</offset>
+			</li>           
+        </capMods>				
+		</li>
+	  
+		<li>
+		<label>Augment failing</label>
+		<minSeverity>0.1</minSeverity>
+		<partEfficiencyOffset>-0.6</partEfficiencyOffset>
+		<vomitMtbDays>1</vomitMtbDays>
+		<painOffset>0.10</painOffset>
+		<capMods>
+			<li>
+				<capacity>Consciousness</capacity>
+				<offset>-0.1</offset>
+			</li>
+		</capMods>
+            <statOffsets>
+				<ComfyTemperatureMin>-1</ComfyTemperatureMin>
+            </statOffsets>			
+		</li>	
+	  
+		<li>
+		<label>Augment rejection</label>
+		<minSeverity>0.3</minSeverity>
+		<partEfficiencyOffset>-0.4</partEfficiencyOffset>
+		<vomitMtbDays>1</vomitMtbDays>
+		<painOffset>0.05</painOffset>
+		<capMods>
+			<li>
+				<capacity>Consciousness</capacity>
+				<offset>-0.1</offset>
+			</li>
+		</capMods>
+            <statOffsets>
+				<ComfyTemperatureMin>-2</ComfyTemperatureMin>
+            </statOffsets>			
+		</li>
+	
+		<li>
+        <label>Augment adapting</label>
+        <minSeverity>0.6</minSeverity>
+		<painOffset>0.025</painOffset>
+		<capMods>
+			<li>
+				<capacity>Manipulation</capacity>
+				<offset>0.005</offset>				   
+			</li>
+		</capMods>
+            <statOffsets>
+				<ComfyTemperatureMin>-3</ComfyTemperatureMin>
+				<MeleeWeapon_DamageMultiplier>1.035</MeleeWeapon_DamageMultiplier>
+            </statOffsets>			
+		</li>
+		
+		<li>
+        <label>Fully adapted</label>
+        <minSeverity>0.8</minSeverity>
+		<capMods>
+			<li>
+				<capacity>Manipulation</capacity>
+				<offset>0.01</offset>				   
+			</li>
+		</capMods>
+            <statOffsets>
+				<ComfyTemperatureMin>-5</ComfyTemperatureMin>
+				<MeleeWeapon_DamageMultiplier>1.07</MeleeWeapon_DamageMultiplier>
+            </statOffsets>		
+		</li> 
+    </stages> 
+	
+  </HediffDef>
+  
 </Defs>
